@@ -1,1 +1,13 @@
+general:
+steps:
+  mtaBuild:
+    buildTarget: 'CF'
+  cloudFoundryDeploy:
+    deployTool: 'mtaDeployPlugin'
+    deployType: 'standard'
+    cloudFoundry:
+      apiEndpoint: 'https://api.cf.us10.hana.ondemand.com'
+      org: 'Apple_Inc._devops-explore'
+      space: 'Devops_Sandbox'
+      credentialsId: 'CF_USER'
 
