@@ -1,10 +1,11 @@
 @Library('piper-lib-os') _
 node('BuildAgent-001') {
     stage('prepare') {
-       // checkout scm
+        deleteDir()
+        checkout scm
       //  script{ datas = readYaml (file: 'mta.yaml') }
-        echo readYaml(text: "---")
-      //  setupCommonPipelineEnvironment script: this
+      //  echo readYaml(text: "---")
+        setupCommonPipelineEnvironment script: this
     }
  //   stage('build') {
     //  mtaBuild script: this
