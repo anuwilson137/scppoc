@@ -6,10 +6,10 @@ node('BuildAgent-001') {
         echo readYaml(text: "---")
       //  setupCommonPipelineEnvironment script: this
     }
-    stage('build') {
+ //   stage('build') {
     //  mtaBuild script: this
-    }
-    stage('deploy') {
+ //   }
+ //   stage('deploy') {
         //cloudFoundryDeploy script: this
-    }
+  //  }
 }
