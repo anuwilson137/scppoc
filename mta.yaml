@@ -1,7 +1,7 @@
 ID: DevOpsSample
-_schema-version: '2.1'
-version: 0.0.1
-
+_schema-version: 2.1.0
+version: 1.0.0
+provider: SAP Sample generator
 modules:
  - name: DevOpsSample
    type: html5
