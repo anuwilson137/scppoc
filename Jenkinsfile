@@ -3,10 +3,11 @@ node('BuildAgent-001') {
     stage('prepare') {
         deleteDir()
         checkout scm
+        echo pwd
       //  script{ datas = readYaml (file: 'mta.yaml') }
       //  echo readYaml(text: "---")
       //  setupCommonPipelineEnvironment script: this
-        setupCommonPipelineEnvironment(script: this)
+      //  setupCommonPipelineEnvironment(script: this)
     }
  //   stage('build') {
     //  mtaBuild script: this
