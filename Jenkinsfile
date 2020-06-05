@@ -1,12 +1,13 @@
 @Library('piper-lib-os') _
 node('BuildAgent-001') {
     stage('prepare') {
-        checkout scm
+       // checkout scm
       //  script{ datas = readYaml (file: 'mta.yaml') }
-        setupCommonPipelineEnvironment script: this
+        echo readYaml(text: "---")
+      //  setupCommonPipelineEnvironment script: this
     }
     stage('build') {
-      mtaBuild script: this
+    //  mtaBuild script: this
     }
     stage('deploy') {
         //cloudFoundryDeploy script: this
