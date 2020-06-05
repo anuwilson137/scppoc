@@ -6,8 +6,9 @@ node('BuildAgent-001') {
         echo pwd
        // sh "ls"
       //  script{ datas = readYaml (file: 'mta.yaml') }
-        echo readYaml(text: "---")
-        setupCommonPipelineEnvironment script: this
+      //  echo readYaml(text: "---")
+        def var= readYaml file: 'mta.yaml'
+        setupCommonPipelineEnvironment script:this
       //  setupCommonPipelineEnvironment(script: this)
     }
  //   stage('build') {
