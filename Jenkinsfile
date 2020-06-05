@@ -4,6 +4,7 @@ node('BuildAgent-001') {
         deleteDir()
         checkout scm
         echo pwd
+        ls
       //  script{ datas = readYaml (file: 'mta.yaml') }
       //  echo readYaml(text: "---")
       //  setupCommonPipelineEnvironment script: this
