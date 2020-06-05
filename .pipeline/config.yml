@@ -1,5 +1,4 @@
 general:
 steps:
-steps:
-  setupCommonPipelineEnvironment:
-    collectTelemetryData: true
+  mtaBuild:
+    buildTarget: 'CF'
