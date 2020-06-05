@@ -3,7 +3,7 @@ node('BuildAgent-001') {
     stage('prepare') {
        // checkout scm
       //  script{ datas = readYaml (file: 'mta.yaml') }
-        echo readYaml(text: "---")
+        echo readYaml(text: "mta.yaml")
       //  setupCommonPipelineEnvironment script: this
     }
  //   stage('build') {
