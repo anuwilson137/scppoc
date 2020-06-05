@@ -2,6 +2,8 @@
 node('BuildAgent-001') {
     stage('prepare') {
         checkout scm
+        script{ datas = readYaml (file: 'mta.yaml') }
+        echo datas.ear_file.deploy.toString()
         setupCommonPipelineEnvironment script:this
     }
     stage('build') {
