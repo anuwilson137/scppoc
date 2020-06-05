@@ -1,5 +1,5 @@
-ID: DevOpsSample
 _schema-version: 2.1.0
+ID: com.sap.DevOpsSample
 version: 0.0.1
 provider: SAP Sample generator
 modules:
