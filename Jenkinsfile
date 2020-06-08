@@ -11,9 +11,9 @@ node('BuildAgent-001') {
         setupCommonPipelineEnvironment script:this
       //  setupCommonPipelineEnvironment(script: this)
     }
- //   stage('build') {
-    //  mtaBuild script: this
- //   }
+    stage('build') {
+      mtaBuild script: this
+    }
  //   stage('deploy') {
         //cloudFoundryDeploy script: this
   //  }
