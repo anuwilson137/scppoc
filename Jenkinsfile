@@ -6,6 +6,7 @@ node('BuildAgent-001') {
         checkout scm
         echo readYaml(text: "---")
       //  def data = readYaml file: 'mta.yaml'
+        echo pwd
         setupCommonPipelineEnvironment script:this
         mtaBuild script: this
         echo pwd
