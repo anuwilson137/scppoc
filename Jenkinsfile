@@ -11,6 +11,6 @@ node('BuildAgent-001') {
         sh "ls"
     }
     stage('build') {
-    mtaBuild script: this
-}
+        mtaBuild script: this
+    }
 }
