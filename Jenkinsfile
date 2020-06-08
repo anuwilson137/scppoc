@@ -4,7 +4,6 @@ node('BuildAgent-001') {
     stage('prepare') {
         deleteDir()
         checkout scm
-      //  script{ datas = readYaml (file: 'mta.yaml') }
       //  echo readYaml(text: "---")
       //  def data = readYaml file: 'mta.yaml'
         setupCommonPipelineEnvironment script:this
@@ -12,9 +11,6 @@ node('BuildAgent-001') {
         sh "ls"
     }
     stage('build') {
-      mtaBuild script: this
+        mtaBuild script: this
     }
- //   stage('deploy') {
-        //cloudFoundryDeploy script: this
-  //  }
 }
