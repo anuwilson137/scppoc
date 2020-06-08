@@ -1,4 +1,7 @@
 general:
+  setupCommonPipelineEnvironment:
+     collectTelemetryData: false
+     runStageInPod: true
 steps:
   setupCommonPipelineEnvironment:
      collectTelemetryData: false
