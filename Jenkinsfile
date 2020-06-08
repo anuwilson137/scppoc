@@ -14,7 +14,6 @@ node('BuildAgent-001') {
         echo "-----------------------------------------------------------------"
         echo pwd
         sh "ls"
-        cloudSdkPipeline script: this
         mtaBuild script: this
     }
 }
