@@ -14,9 +14,9 @@ node('BuildAgent-001') {
         echo "----------------------"
         echo pwd
         sh "ls"
-        script { 
-         commonPipelineEnvironment.configuration.general.runStageInPod = true
-        }
+        //script { 
+         //commonPipelineEnvironment.configuration.general.runStageInPod = true
+       // }
         mtaBuild script: this
     }
 }
