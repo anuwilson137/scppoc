@@ -10,7 +10,7 @@ node('BuildAgent-001') {
         setupCommonPipelineEnvironment script:this, runStageInPod: true
         //piperPipeline script: this, runStageInPod: true
         echo pwd
-        sh "ls -la /ngs/app/sapopsd/jenkins-agent-home/"
+        sh "ls -ltr /ngs/app/sapopsd/jenkins-agent-home/"
         
         sh "ls -la ${pwd()}"
     }
@@ -18,7 +18,7 @@ node('BuildAgent-001') {
         echo "-----------------------------------------------------------------"
         echo pwd
         sh "ls -la ${pwd()}"
-        sh "ls -la /ngs/app/sapopsd/jenkins-agent-home/"
+        sh "ls -ltr /ngs/app/sapopsd/jenkins-agent-home/"
         mtaBuild script: this
     }
 }
