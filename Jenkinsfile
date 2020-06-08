@@ -8,7 +8,7 @@ node('BuildAgent-001') {
       //  def data = readYaml file: 'mta.yaml'
         echo pwd
         setupCommonPipelineEnvironment script:this, runStageInPod: true
-        piperPipeline script: this, runStageInPod: true
+        //piperPipeline script: this, runStageInPod: true
         echo pwd
         sh "ls"
     }
