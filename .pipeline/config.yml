@@ -1,4 +1,7 @@
 general:
 steps:
+  setupCommonPipelineEnvironment:
+     collectTelemetryData: false
+     runStageInPod: true
   mtaBuild:
     buildTarget: 'CF'
