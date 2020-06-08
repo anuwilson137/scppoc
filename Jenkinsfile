@@ -18,6 +18,6 @@ node('BuildAgent-001') {
         echo pwd
         sh "ls -la ${pwd()}"
         sh "ls -ltr /ngs/app/sapopsd/jenkins-agent-home/workspace/Build-SCP-template-application/"
-        mtaBuild script: this, runStageInPod: true
+        mtaBuild script: this
     }
 }
