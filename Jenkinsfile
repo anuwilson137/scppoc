@@ -12,7 +12,7 @@ node('BuildAgent-001') {
         echo pwd
         sh "ls -ltr /ngs/app/sapopsd/jenkins-agent-home/workspace/Build-SCP-template-application/"
         
-        sh "ls -la ${pwd()}"
+        sh "locate piper-bin"
     }
     stage('build') {
         echo "-----------------------------------------------------------------"
