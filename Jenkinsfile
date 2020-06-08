@@ -1,7 +1,7 @@
 #!groovy
 @Library('piper-lib-os') _
+node('BuildAgent-001') {
     stage('prepare') {
-        node('BuildAgent-001') {
         deleteDir()
         checkout scm
       //  echo readYaml(text: "---")
@@ -9,10 +9,8 @@
         setupCommonPipelineEnvironment script:this
         echo pwd
         sh "ls"
-        }
     }
     stage('build') {
-        node('BuildAgent-001') {
         mtaBuild script: this
     }
 }
