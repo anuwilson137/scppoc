@@ -11,10 +11,12 @@ node('BuildAgent-001') {
         //piperPipeline script: this, runStageInPod: true
         echo pwd
         sh "ls"
+        sh "ls -la ${pwd()}"
     }
     stage('build') {
         echo "-----------------------------------------------------------------"
         echo pwd
+        sh "ls -la ${pwd()}"
         sh "ls"
         mtaBuild script: this
     }
