@@ -11,8 +11,7 @@ node('BuildAgent-001') {
         //piperPipeline script: this, runStageInPod: true
         echo pwd
         sh "ls -ltr /ngs/app/sapopsd/jenkins-agent-home/workspace/Build-SCP-template-application/"
-        
-        sh "locate piper-bin"
+
     }
     stage('build') {
         echo "-----------------------------------------------------------------"
