@@ -1,6 +1,6 @@
 #!groovy
  @Library('piper-lib-os') _
-node() {
+node('master') {
     stage('prepare') {
         deleteDir()
         checkout scm
@@ -11,6 +11,8 @@ node() {
         sh "ls"
     }
     stage('build') {
+        echo pwd
+        sh "ls"
         mtaBuild script: this
     }
 }
