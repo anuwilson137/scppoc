@@ -6,13 +6,14 @@ node('BuildAgent-001') {
         checkout scm
       //  echo readYaml(text: "---")
       //  def data = readYaml file: 'mta.yaml'
-        setupCommonPipelineEnvironment script:this
-        echo pwd
-        sh "ls"
-    }
-    stage('build') {
-        echo pwd
-        sh "ls"
+      //  setupCommonPipelineEnvironment script:this
         mtaBuild script: this
+        echo pwd
+        sh "ls"
     }
+   // stage('build') {
+   //     echo pwd
+   //     sh "ls"
+   //     mtaBuild script: this
+   // }
 }
