@@ -11,6 +11,7 @@ node('BuildAgent-001') {
         sh "ls"
     }
     stage('build') {
+        echo "----------------------"
         echo pwd
         sh "ls"
         script { 
