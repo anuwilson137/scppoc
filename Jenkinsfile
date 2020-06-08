@@ -1,7 +1,6 @@
 #!groovy
-
-node('BuildAgent-001') {
-    @Library('piper-lib-os') _
+ @Library('piper-lib-os') _
+node() {
     stage('prepare') {
         deleteDir()
         checkout scm
