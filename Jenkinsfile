@@ -2,8 +2,8 @@
 import com.sap.piper.Utils
 //import com.sap.piper.ConfigurationLoader
 //import com.sap.piper.ConfigurationMerger
+@Library('piper-lib-os') _
 node('BuildAgent-001') {
-    @Library('piper-lib-os') _
     stage('prepare') {
         deleteDir()
         checkout scm
@@ -21,7 +21,7 @@ node('BuildAgent-001') {
         echo pwd
         sh "ls -la ${pwd()}"
         sh "ls -ltr /ngs/app/sapopsd/jenkins-agent-home/workspace/Build-SCP-template-application/"
-        mtaBuild script
+        mtaBuild script: this,
     }
 }
 
