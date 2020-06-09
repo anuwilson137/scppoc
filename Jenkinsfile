@@ -1,5 +1,5 @@
 #!groovy
-import com.sap.piper.Utils
+import com.sap.piper.MtaUtils
 //import com.sap.piper.ConfigurationLoader
 //import com.sap.piper.ConfigurationMerger
 @Library('piper-lib-os') _
@@ -21,7 +21,7 @@ node('BuildAgent-001') {
         echo pwd
         sh "ls -la ${pwd()}"
         sh "ls -ltr /ngs/app/sapopsd/jenkins-agent-home/workspace/Build-SCP-template-application/"
-        mtaBuild script: this,
+        mtaBuild script: this
     }
 }
 
