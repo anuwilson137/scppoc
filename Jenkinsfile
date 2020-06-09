@@ -1,8 +1,7 @@
 #!groovy
-//node('BuildAgent-001') {
+node('BuildAgent-001') {
     @Library('piper-lib-os') _
     stage('prepare') {
-        nodeLabel: 'BuildAgent-001'
         deleteDir()
         checkout scm
         echo readYaml(text: "---")
@@ -15,12 +14,11 @@
 
     }
     stage('build') {
-        nodeLabel: 'BuildAgent-001'
         echo "-----------------------------------------------------------------"
         echo pwd
         sh "ls -la ${pwd()}"
         sh "ls -ltr /ngs/app/sapopsd/jenkins-agent-home/workspace/Build-SCP-template-application/"
         mtaBuild script: this
     }
-//}
+}
 
