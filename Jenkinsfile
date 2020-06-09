@@ -1,23 +1,15 @@
 #!groovy
+@Library('piper-lib-os') _
 node('BuildAgent-001') {
-    @Library('piper-lib-os') _
-    stage('prepare') {
+    stage('Prepare') {
         deleteDir()
         checkout scm
-        echo readYaml(text: "---")
-      //  def data = readYaml file: 'mta.yaml'
         echo pwd
         setupCommonPipelineEnvironment script:this, runStageInPod: true
-        //piperPipeline script: this, runStageInPod: true
-        echo pwd
-        sh "ls -ltr /ngs/app/sapopsd/jenkins-agent-home/workspace/Build-SCP-template-application/"
 
     }
-    stage('build') {
-        echo "-----------------------------------------------------------------"
+    stage('Build') {
         echo pwd
-        sh "ls -la ${pwd()}"
-        sh "ls -ltr /ngs/app/sapopsd/jenkins-agent-home/workspace/Build-SCP-template-application/"
         mtaBuild script: this
     }
 }
