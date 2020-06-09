@@ -1,7 +1,8 @@
 #!groovy
-node('BuildAgent-001') {
+//node('BuildAgent-001') {
     @Library('piper-lib-os') _
     stage('prepare') {
+        nodeLabel: 'BuildAgent-001'
         deleteDir()
         checkout scm
         echo readYaml(text: "---")
@@ -14,6 +15,7 @@ node('BuildAgent-001') {
 
     }
     stage('build') {
+        nodeLabel: 'BuildAgent-001'
         echo "-----------------------------------------------------------------"
         echo pwd
         sh "ls -la ${pwd()}"
