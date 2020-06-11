@@ -1,4 +1,5 @@
 #!groovy
+import groovy.json.JsonSlurper
 import groovy.json.readJSON
 //import com.sap.piper.Utils
 //import com.sap.piper.ConfigurationLoader
