@@ -2,7 +2,7 @@
 //import com.sap.piper.Utils
 //import com.sap.piper.ConfigurationLoader
 //import com.sap.piper.ConfigurationMerger
-@Library('piper-lib-os') _
+@Library('piper-lib-os@master') _
 node('BuildAgent-001') {
     stage('prepare') {
         cleanWs()
