@@ -4,7 +4,7 @@ import groovy.json.JsonSlurper
 //import com.sap.piper.ConfigurationLoader
 //import com.sap.piper.ConfigurationMerger
 @Library('piper-lib-os@master') _
-node('BuildAgent-001') {
+node() {
     stage('prepare') {
         cleanWs()
         deleteDir()
